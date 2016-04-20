@@ -25,11 +25,14 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8Yw-eu-KUR" kind="show" identifier="moreInfo" id="kEU-9g-Bk8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -43,6 +46,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cw-Xg-vSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1222" y="388"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="Bao-HF-IEC">
+            <objects>
+                <viewController id="8Yw-eu-KUR" customClass="EntryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9kS-sK-fw0"/>
+                        <viewControllerLayoutGuide type="bottom" id="MeH-pF-bth"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4L-WW-wKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTW-i7-zXR">
+                                <rect key="frame" x="64" y="138" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.33639413669016904" blue="0.38268166934136805" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonInfoLabel" destination="mTW-i7-zXR" id="NkD-c0-ygP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-AE-DxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YdA-eI-bGH">

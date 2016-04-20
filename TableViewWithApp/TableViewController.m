@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "PokemonNameCell.h"
+#import "EntryViewController.h"
 @interface TableViewController () {
     
     NSMutableArray *myPokemonArray;
@@ -50,6 +51,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     //cell.pokemonNameLabel.text = [myPokemonArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [myPokemonArray objectAtIndex:indexPath.row];
+    
 //    if (cell == nil) {
 //    
 //        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -196,14 +198,20 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    EntryViewController *entry = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"moreInfo"]) {
+        entry.pokeInfo = @"ASH";
+        
+    }
+    
 }
-*/
+
 
 @end
