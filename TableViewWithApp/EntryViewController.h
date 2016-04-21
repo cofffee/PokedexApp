@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSString *pokeInfo;
 @property (weak, nonatomic) IBOutlet UILabel *pokemonInfoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pokemonStats;
 
 @end

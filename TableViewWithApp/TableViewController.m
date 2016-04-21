@@ -160,6 +160,7 @@
             cell.accessoryType = UITableViewCellAccessoryNone;
         // Reflect deselection in data model
     }
+
 }
 
 
@@ -201,13 +202,17 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+ //In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     EntryViewController *entry = [segue destinationViewController];
     if ([segue.identifier isEqualToString:@"moreInfo"]) {
-        entry.pokeInfo = @"ASH";
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSString *pokemonName = [myPokemonArray objectAtIndex:indexPath.row];
+        
+        entry.pokeInfo = [NSString stringWithFormat:@"%@",pokemonName];
         
     }
     

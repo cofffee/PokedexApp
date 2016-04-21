@@ -50,7 +50,7 @@
         <!--Entry View Controller-->
         <scene sceneID="Bao-HF-IEC">
             <objects>
-                <viewController id="8Yw-eu-KUR" customClass="EntryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="8Yw-eu-KUR" customClass="EntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9kS-sK-fw0"/>
                         <viewControllerLayoutGuide type="bottom" id="MeH-pF-bth"/>
@@ -65,11 +65,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon Stats" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62z-Bu-tT6">
+                                <rect key="frame" x="20" y="167" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.33639413669016904" blue="0.38268166934136805" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="pokemonInfoLabel" destination="mTW-i7-zXR" id="NkD-c0-ygP"/>
+                        <outlet property="pokemonStats" destination="62z-Bu-tT6" id="jYh-hW-qaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-AE-DxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
